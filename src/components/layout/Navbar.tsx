@@ -1,0 +1,111 @@
+"use client";
+import React, { useEffect, useState } from 'react';
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 60);
+
+      const sections = document.querySelectorAll('section[id]');
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = (section as HTMLElement).offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id') || '';
+        }
+      });
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const openMobileNav = () => {
+    setMobileMenuOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMobileNav = () => {
+    setMobileMenuOpen(false);
+    document.body.style.overflow = '';
+  };
+
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    const targetId = e.currentTarget.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    if (targetId.startsWith('#')) {
+      e.preventDefault();
+      closeMobileNav();
+      const target = document.querySelector(targetId);
+      if (target) {
+        const navHeight = document.querySelector('.navbar')?.clientHeight || 72;
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight - 20;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    }
+  };
+
+  return (
+    <>
+      {/* Emergency Top Bar */}
+      <div className="emergency-bar" id="emergencyBar">
+        <span className="pulse-dot"></span>
+        🚑 24/7 Emergency Services Available — Call Now:
+        <a href="tel:+919876543210">+91-98765-43210</a>
+      </div>
+
+      {/* Navbar */}
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
+        <div className="container nav-inner">
+          <a href="#" className="nav-logo" aria-label="JS Hospital Home" onClick={handleSmoothScroll}>
+            <div className="logo-icon">JS</div>
+            <div>
+              <div style={{ lineHeight: 1.1 }}>JS Hospital</div>
+              <div style={{ fontSize: '.65rem', fontWeight: 400, color: 'var(--clr-text)', letterSpacing: '.5px' }}>NARHE, PUNE</div>
+            </div>
+          </a>
+          <div className="nav-links" id="navLinks">
+            <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={handleSmoothScroll}>Home</a>
+            <a href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={handleSmoothScroll}>Services</a>
+            <a href="#doctor" className={activeSection === 'doctor' ? 'active' : ''} onClick={handleSmoothScroll}>Doctors</a>
+            <a href="#why-us" className={activeSection === 'why-us' ? 'active' : ''} onClick={handleSmoothScroll}>Why Us</a>
+            <a href="#testimonials" className={activeSection === 'testimonials' ? 'active' : ''} onClick={handleSmoothScroll}>Reviews</a>
+            <a href="#appointment" className={activeSection === 'appointment' ? 'active' : ''} onClick={handleSmoothScroll}>Book</a>
+            <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={handleSmoothScroll}>Contact</a>
+          </div>
+          <div className="nav-cta">
+            <a href="tel:+919876543210" className="nav-phone">📞 98765-43210</a>
+            <a href="#appointment" className="btn btn-primary btn-sm" onClick={handleSmoothScroll}>Book Appointment</a>
+            <button className="hamburger" id="hamburger" aria-label="Open Menu" onClick={openMobileNav}>
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Nav */}
+      <div className={`mobile-nav-overlay ${mobileMenuOpen ? 'active' : ''}`} id="mobileOverlay" onClick={closeMobileNav}></div>
+      <div className={`mobile-nav ${mobileMenuOpen ? 'active' : ''}`} id="mobileNav">
+        <button className="mobile-nav-close" id="mobileClose" aria-label="Close Menu" onClick={closeMobileNav}>✕</button>
+        <div className="mobile-nav-links">
+          <a href="#home" onClick={handleSmoothScroll}>🏠 Home</a>
+          <a href="#services" onClick={handleSmoothScroll}>🏥 Services</a>
+          <a href="#doctor" onClick={handleSmoothScroll}>👨‍⚕️ Doctors</a>
+          <a href="#why-us" onClick={handleSmoothScroll}>⭐ Why Choose Us</a>
+          <a href="#testimonials" onClick={handleSmoothScroll}>💬 Reviews</a>
+          <a href="#appointment" onClick={handleSmoothScroll}>📅 Book Appointment</a>
+          <a href="#contact" onClick={handleSmoothScroll}>📞 Contact Us</a>
+        </div>
+        <div className="mobile-nav-cta">
+          <a href="tel:+919876543210" className="btn btn-primary">📞 Call Now</a>
+          <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20JS%20Hospital" className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+        </div>
+      </div>
+    </>
+  );
+}
