@@ -77,21 +77,21 @@ export default function Navbar() {
           </Link>
           <div className="nav-links" id="navLinks">
             {isHome ? (
+              <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={handleSmoothScroll}>Home</a>
+            ) : (
+              <Link href="/">Home</Link>
+            )}
+            <Link href="/services" className={pathname === '/services' ? 'active' : ''}>Services</Link>
+            <Link href="/doctors" className={pathname === '/doctors' ? 'active' : ''}>Doctors</Link>
+            <Link href="/insurance" className={pathname === '/insurance' ? 'active' : ''}>Insurance</Link>
+            {isHome ? (
               <>
-                <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={handleSmoothScroll}>Home</a>
-                <a href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={handleSmoothScroll}>Services</a>
-                <a href="#doctor" className={activeSection === 'doctor' ? 'active' : ''} onClick={handleSmoothScroll}>Doctors</a>
-                <a href="#why-us" className={activeSection === 'why-us' ? 'active' : ''} onClick={handleSmoothScroll}>Why Us</a>
                 <a href="#testimonials" className={activeSection === 'testimonials' ? 'active' : ''} onClick={handleSmoothScroll}>Reviews</a>
                 <a href="#appointment" className={activeSection === 'appointment' ? 'active' : ''} onClick={handleSmoothScroll}>Book</a>
                 <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={handleSmoothScroll}>Contact</a>
               </>
             ) : (
               <>
-                <Link href="/" className="">Home</Link>
-                <Link href="/services" className={pathname === '/services' ? 'active' : ''}>Services</Link>
-                <Link href="/doctors" className={pathname === '/doctors' ? 'active' : ''}>Doctors</Link>
-                <Link href="/insurance" className={pathname === '/insurance' ? 'active' : ''}>Insurance</Link>
                 <Link href="/#testimonials">Reviews</Link>
                 <Link href="/#appointment">Book</Link>
                 <Link href="/#contact">Contact</Link>
@@ -118,21 +118,21 @@ export default function Navbar() {
         <button className="mobile-nav-close" id="mobileClose" aria-label="Close Menu" onClick={closeMobileNav}>✕</button>
         <div className="mobile-nav-links">
           {isHome ? (
+            <a href="#home" onClick={handleSmoothScroll}>🏠 Home</a>
+          ) : (
+            <Link href="/" onClick={closeMobileNav}>🏠 Home</Link>
+          )}
+          <Link href="/services" onClick={closeMobileNav}>🏥 All Services</Link>
+          <Link href="/doctors" onClick={closeMobileNav}>👨‍⚕️ Our Doctors</Link>
+          <Link href="/insurance" onClick={closeMobileNav}>🛡️ Insurance</Link>
+          {isHome ? (
             <>
-              <a href="#home" onClick={handleSmoothScroll}>🏠 Home</a>
-              <a href="#services" onClick={handleSmoothScroll}>🏥 Services</a>
-              <a href="#doctor" onClick={handleSmoothScroll}>👨‍⚕️ Doctors</a>
-              <a href="#why-us" onClick={handleSmoothScroll}>⭐ Why Choose Us</a>
               <a href="#testimonials" onClick={handleSmoothScroll}>💬 Reviews</a>
               <a href="#appointment" onClick={handleSmoothScroll}>📅 Book Appointment</a>
               <a href="#contact" onClick={handleSmoothScroll}>📞 Contact Us</a>
             </>
           ) : (
             <>
-              <Link href="/" onClick={closeMobileNav}>🏠 Home</Link>
-              <Link href="/services" onClick={closeMobileNav}>🏥 All Services</Link>
-              <Link href="/doctors" onClick={closeMobileNav}>👨‍⚕️ Our Doctors</Link>
-              <Link href="/insurance" onClick={closeMobileNav}>🛡️ Insurance</Link>
               <Link href="/#testimonials" onClick={closeMobileNav}>💬 Reviews</Link>
               <Link href="/#appointment" onClick={closeMobileNav}>📅 Book Appointment</Link>
               <Link href="/#contact" onClick={closeMobileNav}>📞 Contact Us</Link>
