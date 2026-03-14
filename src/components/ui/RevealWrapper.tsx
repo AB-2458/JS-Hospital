@@ -6,14 +6,25 @@ export default function RevealWrapper({ children, className = "", delayClass = "
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    // Check if element is already in viewport (for sub-pages where content loads above fold)
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      // Small delay for staggered reveal effect
+      const timer = setTimeout(() => setRevealed(true), 100);
+      return () => clearTimeout(timer);
+    }
+
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setRevealed(true);
-        if (ref.current) observer.unobserve(ref.current);
+        observer.unobserve(el);
       }
-    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
     
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
