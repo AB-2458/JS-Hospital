@@ -1,29 +1,35 @@
 "use client";
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 60);
 
-      const sections = document.querySelectorAll('section[id]');
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = (section as HTMLElement).offsetTop - 120;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute('id') || '';
-        }
-      });
-      setActiveSection(current);
+      if (isHome) {
+        const sections = document.querySelectorAll('section[id]');
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = (section as HTMLElement).offsetTop - 120;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id') || '';
+          }
+        });
+        setActiveSection(current);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHome]);
 
   const openMobileNav = () => {
     setMobileMenuOpen(true);
@@ -62,25 +68,43 @@ export default function Navbar() {
       {/* Navbar */}
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
         <div className="container nav-inner">
-          <a href="#" className="nav-logo" aria-label="JS Hospital Home" onClick={handleSmoothScroll}>
+          <Link href="/" className="nav-logo" aria-label="JS Hospital Home">
             <div className="logo-icon">JS</div>
             <div>
               <div style={{ lineHeight: 1.1 }}>JS Hospital</div>
               <div style={{ fontSize: '.65rem', fontWeight: 400, color: 'var(--clr-text)', letterSpacing: '.5px' }}>NARHE, PUNE</div>
             </div>
-          </a>
+          </Link>
           <div className="nav-links" id="navLinks">
-            <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={handleSmoothScroll}>Home</a>
-            <a href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={handleSmoothScroll}>Services</a>
-            <a href="#doctor" className={activeSection === 'doctor' ? 'active' : ''} onClick={handleSmoothScroll}>Doctors</a>
-            <a href="#why-us" className={activeSection === 'why-us' ? 'active' : ''} onClick={handleSmoothScroll}>Why Us</a>
-            <a href="#testimonials" className={activeSection === 'testimonials' ? 'active' : ''} onClick={handleSmoothScroll}>Reviews</a>
-            <a href="#appointment" className={activeSection === 'appointment' ? 'active' : ''} onClick={handleSmoothScroll}>Book</a>
-            <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={handleSmoothScroll}>Contact</a>
+            {isHome ? (
+              <>
+                <a href="#home" className={activeSection === 'home' ? 'active' : ''} onClick={handleSmoothScroll}>Home</a>
+                <a href="#services" className={activeSection === 'services' ? 'active' : ''} onClick={handleSmoothScroll}>Services</a>
+                <a href="#doctor" className={activeSection === 'doctor' ? 'active' : ''} onClick={handleSmoothScroll}>Doctors</a>
+                <a href="#why-us" className={activeSection === 'why-us' ? 'active' : ''} onClick={handleSmoothScroll}>Why Us</a>
+                <a href="#testimonials" className={activeSection === 'testimonials' ? 'active' : ''} onClick={handleSmoothScroll}>Reviews</a>
+                <a href="#appointment" className={activeSection === 'appointment' ? 'active' : ''} onClick={handleSmoothScroll}>Book</a>
+                <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={handleSmoothScroll}>Contact</a>
+              </>
+            ) : (
+              <>
+                <Link href="/" className="">Home</Link>
+                <Link href="/services" className={pathname === '/services' ? 'active' : ''}>Services</Link>
+                <Link href="/doctors" className={pathname === '/doctors' ? 'active' : ''}>Doctors</Link>
+                <Link href="/insurance" className={pathname === '/insurance' ? 'active' : ''}>Insurance</Link>
+                <Link href="/#testimonials">Reviews</Link>
+                <Link href="/#appointment">Book</Link>
+                <Link href="/#contact">Contact</Link>
+              </>
+            )}
           </div>
           <div className="nav-cta">
             <a href="tel:+919876543210" className="nav-phone">📞 98765-43210</a>
-            <a href="#appointment" className="btn btn-primary btn-sm" onClick={handleSmoothScroll}>Book Appointment</a>
+            {isHome ? (
+              <a href="#appointment" className="btn btn-primary btn-sm" onClick={handleSmoothScroll}>Book Appointment</a>
+            ) : (
+              <Link href="/#appointment" className="btn btn-primary btn-sm">Book Appointment</Link>
+            )}
             <button className="hamburger" id="hamburger" aria-label="Open Menu" onClick={openMobileNav}>
               <span></span><span></span><span></span>
             </button>
@@ -93,13 +117,27 @@ export default function Navbar() {
       <div className={`mobile-nav ${mobileMenuOpen ? 'active' : ''}`} id="mobileNav">
         <button className="mobile-nav-close" id="mobileClose" aria-label="Close Menu" onClick={closeMobileNav}>✕</button>
         <div className="mobile-nav-links">
-          <a href="#home" onClick={handleSmoothScroll}>🏠 Home</a>
-          <a href="#services" onClick={handleSmoothScroll}>🏥 Services</a>
-          <a href="#doctor" onClick={handleSmoothScroll}>👨‍⚕️ Doctors</a>
-          <a href="#why-us" onClick={handleSmoothScroll}>⭐ Why Choose Us</a>
-          <a href="#testimonials" onClick={handleSmoothScroll}>💬 Reviews</a>
-          <a href="#appointment" onClick={handleSmoothScroll}>📅 Book Appointment</a>
-          <a href="#contact" onClick={handleSmoothScroll}>📞 Contact Us</a>
+          {isHome ? (
+            <>
+              <a href="#home" onClick={handleSmoothScroll}>🏠 Home</a>
+              <a href="#services" onClick={handleSmoothScroll}>🏥 Services</a>
+              <a href="#doctor" onClick={handleSmoothScroll}>👨‍⚕️ Doctors</a>
+              <a href="#why-us" onClick={handleSmoothScroll}>⭐ Why Choose Us</a>
+              <a href="#testimonials" onClick={handleSmoothScroll}>💬 Reviews</a>
+              <a href="#appointment" onClick={handleSmoothScroll}>📅 Book Appointment</a>
+              <a href="#contact" onClick={handleSmoothScroll}>📞 Contact Us</a>
+            </>
+          ) : (
+            <>
+              <Link href="/" onClick={closeMobileNav}>🏠 Home</Link>
+              <Link href="/services" onClick={closeMobileNav}>🏥 All Services</Link>
+              <Link href="/doctors" onClick={closeMobileNav}>👨‍⚕️ Our Doctors</Link>
+              <Link href="/insurance" onClick={closeMobileNav}>🛡️ Insurance</Link>
+              <Link href="/#testimonials" onClick={closeMobileNav}>💬 Reviews</Link>
+              <Link href="/#appointment" onClick={closeMobileNav}>📅 Book Appointment</Link>
+              <Link href="/#contact" onClick={closeMobileNav}>📞 Contact Us</Link>
+            </>
+          )}
         </div>
         <div className="mobile-nav-cta">
           <a href="tel:+919876543210" className="btn btn-primary">📞 Call Now</a>
