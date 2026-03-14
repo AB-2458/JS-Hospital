@@ -84,27 +84,13 @@ export default function Navbar() {
             <Link href="/services" className={pathname === '/services' ? 'active' : ''}>Services</Link>
             <Link href="/doctors" className={pathname === '/doctors' ? 'active' : ''}>Doctors</Link>
             <Link href="/insurance" className={pathname === '/insurance' ? 'active' : ''}>Insurance</Link>
-            {isHome ? (
-              <>
-                <a href="#testimonials" className={activeSection === 'testimonials' ? 'active' : ''} onClick={handleSmoothScroll}>Reviews</a>
-                <a href="#appointment" className={activeSection === 'appointment' ? 'active' : ''} onClick={handleSmoothScroll}>Book</a>
-                <a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={handleSmoothScroll}>Contact</a>
-              </>
-            ) : (
-              <>
-                <Link href="/#testimonials">Reviews</Link>
-                <Link href="/#appointment">Book</Link>
-                <Link href="/#contact">Contact</Link>
-              </>
-            )}
+            <Link href="/reviews" className={pathname === '/reviews' ? 'active' : ''}>Reviews</Link>
+            <Link href="/book" className={pathname === '/book' ? 'active' : ''}>Book</Link>
+            <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact</Link>
           </div>
           <div className="nav-cta">
             <a href="tel:+919876543210" className="nav-phone">📞 98765-43210</a>
-            {isHome ? (
-              <a href="#appointment" className="btn btn-primary btn-sm" onClick={handleSmoothScroll}>Book Appointment</a>
-            ) : (
-              <Link href="/#appointment" className="btn btn-primary btn-sm">Book Appointment</Link>
-            )}
+            <Link href="/book" className="btn btn-primary btn-sm">Book Appointment</Link>
             <button className="hamburger" id="hamburger" aria-label="Open Menu" onClick={openMobileNav}>
               <span></span><span></span><span></span>
             </button>
@@ -125,19 +111,9 @@ export default function Navbar() {
           <Link href="/services" onClick={closeMobileNav}>🏥 All Services</Link>
           <Link href="/doctors" onClick={closeMobileNav}>👨‍⚕️ Our Doctors</Link>
           <Link href="/insurance" onClick={closeMobileNav}>🛡️ Insurance</Link>
-          {isHome ? (
-            <>
-              <a href="#testimonials" onClick={handleSmoothScroll}>💬 Reviews</a>
-              <a href="#appointment" onClick={handleSmoothScroll}>📅 Book Appointment</a>
-              <a href="#contact" onClick={handleSmoothScroll}>📞 Contact Us</a>
-            </>
-          ) : (
-            <>
-              <Link href="/#testimonials" onClick={closeMobileNav}>💬 Reviews</Link>
-              <Link href="/#appointment" onClick={closeMobileNav}>📅 Book Appointment</Link>
-              <Link href="/#contact" onClick={closeMobileNav}>📞 Contact Us</Link>
-            </>
-          )}
+          <Link href="/reviews" onClick={closeMobileNav}>💬 Reviews</Link>
+          <Link href="/book" onClick={closeMobileNav}>📅 Book Appointment</Link>
+          <Link href="/contact" onClick={closeMobileNav}>📞 Contact Us</Link>
         </div>
         <div className="mobile-nav-cta">
           <a href="tel:+919876543210" className="btn btn-primary">📞 Call Now</a>
