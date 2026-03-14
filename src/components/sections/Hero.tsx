@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
         <div className="hero-visual">
           <div className="hero-image-wrapper">
-            <img src="/images/hospital-hero.png" alt="JS Hospital building in Narhe, Pune — Modern healthcare facility" width="480" height="420" loading="eager" />
+            <img src="/images/hospital-hero-new.png" alt="JS Hospital building in Narhe, Pune — Modern healthcare facility" width="480" height="420" loading="eager" />
           </div>
           <div className="hero-float-card card-rating">
             <div className="card-icon gold">⭐</div>

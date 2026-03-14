@@ -14,7 +14,7 @@ const doctors = [
     availability: "Mon – Sat, 10 AM – 8 PM",
     initials: "UJ",
     featured: true,
-    image: "/images/doctor.jpg",
+    image: "/images/UmeshJadhav.png",
   },
   {
     name: "Dr. Sneha Kulkarni",

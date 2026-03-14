@@ -12,7 +12,7 @@ export default function DoctorHighlight() {
           <p className="section-subtitle">Leading our team with expertise, compassion, and a commitment to excellence in patient care.</p>
         </RevealWrapper>
         <RevealWrapper className="doctor-card-large">
-          <img src="/images/doctor.jpg" alt="Dr. Umesh Jadhav — Senior Doctor at JS Hospital Narhe Pune" className="doctor-image" width="380" height="440" loading="lazy" />
+          <img src="/images/UmeshJadhav.png" alt="Dr. Umesh Jadhav — Senior Doctor at JS Hospital Narhe Pune" className="doctor-image" width="380" height="440" loading="lazy" />
           <div className="doctor-info">
             <h3 className="doctor-name">Dr. Umesh Jadhav</h3>
             <p className="doctor-title">Senior Consultant & Hospital Director</p>
