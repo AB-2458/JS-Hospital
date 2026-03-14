@@ -16,7 +16,7 @@ export default function Hero() {
           </p>
           <div className="hero-btns">
             <a href="#appointment" className="btn btn-primary">📅 Book Appointment</a>
-            <a href="tel:+919876543210" className="btn btn-secondary">📞 Call Now</a>
+            <a href="tel:+917745849680" className="btn btn-secondary">📞 Call Now</a>
           </div>
           <div className="hero-features">
             <div className="hero-feature">

@@ -19,8 +19,8 @@ export default function FloatingActions() {
   return (
     <>
       <div className="fab-container">
-        <a href="tel:+919876543210" className="fab fab-call" aria-label="Call JS Hospital">📞</a>
-        <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20JS%20Hospital" className="fab fab-whatsapp" aria-label="WhatsApp JS Hospital" target="_blank" rel="noopener noreferrer">💬</a>
+        <a href="tel:+917745849680" className="fab fab-call" aria-label="Call JS Hospital">📞</a>
+        <a href="https://wa.me/917745849680?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20JS%20Hospital" className="fab fab-whatsapp" aria-label="WhatsApp JS Hospital" target="_blank" rel="noopener noreferrer">💬</a>
       </div>
       
       <button 

@@ -62,7 +62,7 @@ export default function Navbar() {
       <div className="emergency-bar" id="emergencyBar">
         <span className="pulse-dot"></span>
         🚑 24/7 Emergency Services Available — Call Now:
-        <a href="tel:+919876543210">+91-98765-43210</a>
+        <a href="tel:+917745849680">+91-77458-49680</a>
       </div>
 
       {/* Navbar */}
@@ -89,7 +89,7 @@ export default function Navbar() {
             <Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact</Link>
           </div>
           <div className="nav-cta">
-            <a href="tel:+919876543210" className="nav-phone">📞 98765-43210</a>
+            <a href="tel:+917745849680" className="nav-phone">📞 77458-49680</a>
             <Link href="/book" className="btn btn-primary btn-sm">Book Appointment</Link>
             <button className="hamburger" id="hamburger" aria-label="Open Menu" onClick={openMobileNav}>
               <span></span><span></span><span></span>
@@ -116,8 +116,8 @@ export default function Navbar() {
           <Link href="/contact" onClick={closeMobileNav}>📞 Contact Us</Link>
         </div>
         <div className="mobile-nav-cta">
-          <a href="tel:+919876543210" className="btn btn-primary">📞 Call Now</a>
-          <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20JS%20Hospital" className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+          <a href="tel:+917745849680" className="btn btn-primary">📞 Call Now</a>
+          <a href="https://wa.me/917745849680?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20JS%20Hospital" className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
         </div>
       </div>
     </>

@@ -11,7 +11,7 @@ export default function EmergencyCta() {
           <p>Don't wait in an emergency. Our team is ready to help you round the clock.</p>
         </div>
         <div className="emergency-actions">
-          <a href="tel:+919876543210" className="btn btn-white">📞 Call Emergency: 98765-43210</a>
+          <a href="tel:+917745849680" className="btn btn-white">📞 Call Emergency: 77458-49680</a>
           <a href="https://maps.google.com/?q=JS+Hospital+Narhe+Pune" target="_blank" rel="noopener noreferrer" className="btn btn-white" style={{ borderColor: 'rgba(255,255,255,.5)', background: 'rgba(255,255,255,.15)', color: '#fff' }}>📍 Get Directions</a>
         </div>
       </div>

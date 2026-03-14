@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
             <div className="footer-contact-item">
               <span className="icon">📞</span>
-              <a href="tel:+919876543210" style={{ color: 'rgba(255,255,255,.75)' }}>+91-98765-43210</a>
+              <a href="tel:+917745849680" style={{ color: 'rgba(255,255,255,.75)' }}>+91-77458-49680</a>
             </div>
             <div className="footer-contact-item">
               <span className="icon">📧</span>

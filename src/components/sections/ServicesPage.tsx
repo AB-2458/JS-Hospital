@@ -123,7 +123,7 @@ export default function ServicesContent() {
               <p className="sp-cta-desc">Our team is happy to guide you. Call us or book an appointment for a consultation.</p>
             </div>
             <div className="sp-cta-actions">
-              <a href="tel:+919876543210" className="btn btn-primary">📞 Call Now</a>
+              <a href="tel:+917745849680" className="btn btn-primary">📞 Call Now</a>
               <Link href="/#appointment" className="btn btn-secondary">📅 Book Appointment</Link>
             </div>
           </div>

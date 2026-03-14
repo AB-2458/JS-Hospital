@@ -47,12 +47,12 @@ export default function ContactPageContent() {
       <div className="container">
         {/* Quick Contact Buttons */}
         <RevealWrapper className="cp-quick-actions">
-          <a href="tel:+919876543210" className="cp-action-card">
+          <a href="tel:+917745849680" className="cp-action-card">
             <div className="cp-action-icon cp-icon-phone">📞</div>
             <div className="cp-action-title">Call Us</div>
-            <div className="cp-action-desc">+91-98765-43210</div>
+            <div className="cp-action-desc">+91-77458-49680</div>
           </a>
-          <a href="https://wa.me/919876543210?text=Hi%2C%20I%20need%20help" className="cp-action-card" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/917745849680?text=Hi%2C%20I%20need%20help" className="cp-action-card" target="_blank" rel="noopener noreferrer">
             <div className="cp-action-icon cp-icon-whatsapp">💬</div>
             <div className="cp-action-title">WhatsApp</div>
             <div className="cp-action-desc">Chat with us</div>
@@ -87,21 +87,21 @@ export default function ContactPageContent() {
                   <div className="cp-info-icon">📞</div>
                   <div>
                     <div className="cp-info-label">Phone</div>
-                    <div className="cp-info-value"><a href="tel:+919876543210">+91-98765-43210</a></div>
+                    <div className="cp-info-value"><a href="tel:+917745849680">+91-77458-49680</a></div>
                   </div>
                 </div>
                 <div className="cp-info-item">
                   <div className="cp-info-icon">🚨</div>
                   <div>
                     <div className="cp-info-label">Emergency</div>
-                    <div className="cp-info-value"><a href="tel:+919876543210">+91-98765-43210 (24/7)</a></div>
+                    <div className="cp-info-value"><a href="tel:+917745849680">+91-77458-49680 (24/7)</a></div>
                   </div>
                 </div>
                 <div className="cp-info-item">
                   <div className="cp-info-icon">💬</div>
                   <div>
                     <div className="cp-info-label">WhatsApp</div>
-                    <div className="cp-info-value"><a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
+                    <div className="cp-info-value"><a href="https://wa.me/917745849680" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
                   </div>
                 </div>
                 <div className="cp-info-item">

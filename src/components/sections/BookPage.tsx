@@ -129,7 +129,7 @@ export default function BookPageContent() {
             </div>
             <div className="bp-success-actions">
               <a href="/" className="btn btn-primary">🏠 Back to Home</a>
-              <a href="tel:+919876543210" className="btn btn-secondary">📞 Call Hospital</a>
+              <a href="tel:+917745849680" className="btn btn-secondary">📞 Call Hospital</a>
             </div>
           </RevealWrapper>
         </div>
@@ -179,8 +179,8 @@ export default function BookPageContent() {
             <div className="bp-contact-box">
               <h4>Need Help Booking?</h4>
               <p>Our staff can book for you over the phone.</p>
-              <a href="tel:+919876543210" className="btn btn-primary btn-sm" style={{ marginTop: '12px', width: '100%', justifyContent: 'center' }}>📞 Call Now</a>
-              <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment" className="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer" style={{ marginTop: '8px', width: '100%', justifyContent: 'center', background: 'var(--clr-whatsapp)', color: '#fff' }}>💬 WhatsApp</a>
+              <a href="tel:+917745849680" className="btn btn-primary btn-sm" style={{ marginTop: '12px', width: '100%', justifyContent: 'center' }}>📞 Call Now</a>
+              <a href="https://wa.me/917745849680?text=Hi%2C%20I%20want%20to%20book%20an%20appointment" className="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer" style={{ marginTop: '8px', width: '100%', justifyContent: 'center', background: 'var(--clr-whatsapp)', color: '#fff' }}>💬 WhatsApp</a>
             </div>
           </RevealWrapper>
 
@@ -284,7 +284,7 @@ export default function BookPageContent() {
                     </label>
                     {isEmergency && (
                       <div className="bp-emergency-note">
-                        For medical emergencies, please call <a href="tel:+919876543210"><strong>+91-98765-43210</strong></a> immediately. Our emergency department is open 24/7.
+                        For medical emergencies, please call <a href="tel:+917745849680"><strong>+91-77458-49680</strong></a> immediately. Our emergency department is open 24/7.
                       </div>
                     )}
                   </div>

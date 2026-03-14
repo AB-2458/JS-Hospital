@@ -31,14 +31,14 @@ export default function Contact() {
               <div className="contact-icon">📞</div>
               <div>
                 <div className="contact-label">Phone</div>
-                <div className="contact-value"><a href="tel:+919876543210" style={{ color: 'var(--clr-primary)' }}>+91-98765-43210</a></div>
+                <div className="contact-value"><a href="tel:+917745849680" style={{ color: 'var(--clr-primary)' }}>+91-77458-49680</a></div>
               </div>
             </div>
             <div className="contact-item">
               <div className="contact-icon">💬</div>
               <div>
                 <div className="contact-label">WhatsApp</div>
-                <div className="contact-value"><a href="https://wa.me/919876543210" style={{ color: 'var(--clr-whatsapp)' }} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
+                <div className="contact-value"><a href="https://wa.me/917745849680" style={{ color: 'var(--clr-whatsapp)' }} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
               </div>
             </div>
             <div className="contact-item">

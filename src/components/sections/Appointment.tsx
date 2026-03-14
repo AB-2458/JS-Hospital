@@ -59,14 +59,14 @@ export default function Appointment() {
               we'll confirm your appointment within 2 hours.
             </p>
             <div className="appointment-methods">
-              <a href="tel:+919876543210" className="appointment-method">
+              <a href="tel:+917745849680" className="appointment-method">
                 <div className="method-icon phone">📞</div>
                 <div>
                   <div className="method-title">Call Us</div>
-                  <div className="method-desc">+91-98765-43210 (Available 24/7)</div>
+                  <div className="method-desc">+91-77458-49680 (Available 24/7)</div>
                 </div>
               </a>
-              <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20JS%20Hospital" className="appointment-method" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/917745849680?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20JS%20Hospital" className="appointment-method" target="_blank" rel="noopener noreferrer">
                 <div className="method-icon whatsapp">💬</div>
                 <div>
                   <div className="method-title">WhatsApp Us</div>

@@ -72,7 +72,7 @@ export default function InsuranceContent() {
               <div className="ins-help-icon">📞</div>
               <h4>Need Help with Insurance?</h4>
               <p>Our insurance coordination team is available to answer your queries and guide you through the claim process.</p>
-              <a href="tel:+919876543210" className="btn btn-primary btn-sm" style={{ marginTop: '16px' }}>Call Insurance Desk</a>
+              <a href="tel:+917745849680" className="btn btn-primary btn-sm" style={{ marginTop: '16px' }}>Call Insurance Desk</a>
             </div>
             <div className="ins-help-card">
               <div className="ins-help-icon">📄</div>
@@ -95,7 +95,7 @@ export default function InsuranceContent() {
               <p className="sp-cta-desc">We may still be able to help. Contact our insurance desk to check if your plan is accepted.</p>
             </div>
             <div className="sp-cta-actions">
-              <a href="tel:+919876543210" className="btn btn-primary">📞 Call Insurance Desk</a>
+              <a href="tel:+917745849680" className="btn btn-primary">📞 Call Insurance Desk</a>
               <Link href="/#appointment" className="btn btn-secondary">📅 Book Appointment</Link>
             </div>
           </div>
