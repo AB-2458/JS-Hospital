@@ -1,0 +1,335 @@
+/* =========================================
+   MODERN AI HEALTHCARE UI THEME OVERRIDES
+   ========================================= */
+
+/* General Background Gradient */
+body {
+  background: linear-gradient(135deg, #13ECE1 0%, #157BEE 50%, #4FA5F5 100%) !important;
+  background-attachment: fixed !important;
+  color: #1e293b !important;
+}
+
+/* Typography */
+.hero-title, .section-title, .sp-cta-title, .page-hero-title {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -1.5px !important;
+}
+
+.hero-title {
+  font-size: 4.8rem !important;
+  line-height: 1.05 !important;
+  font-weight: 600 !important;
+  color: #1a202c !important;
+  text-shadow: 0 4px 20px rgba(255,255,255,0.4) !important;
+}
+
+.hero-title span {
+  color: #0f172a !important;
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  font-size: 1.25rem !important;
+  color: #475569 !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+
+/* Emergency Bar */
+.emergency-bar {
+  background: linear-gradient(90deg, #ef4444, #dc2626) !important;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  margin: 15px auto !important;
+  max-width: 1300px !important;
+  width: calc(100% - 30px) !important;
+  border-radius: 40px !important;
+  top: 15px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.nav-links a {
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  padding: 8px 12px !important;
+  font-size: 0.95rem !important;
+  border-radius: 30px !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe) !important;
+  color: #0284c7 !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03) !important;
+}
+
+/* Hero Section */
+.hero {
+  background: transparent !important;
+  padding: 40px 0 60px !important;
+}
+.hero::before, .hero::after {
+  display: none !important;
+}
+
+.hero-inner {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(30px) !important;
+  -webkit-backdrop-filter: blur(30px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 40px !important;
+  padding: 60px !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), inset 0 2px 10px rgba(255,255,255,0.9) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  padding: 14px 28px !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3) !important;
+  font-size: 1.05rem !important;
+  height: 54px;
+}
+
+.btn-primary::after {
+  content: '↗';
+  background: rgba(255,255,255,0.2) !important;
+  color: #fff !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.2rem !important;
+  margin-left: 10px !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4) !important;
+}
+
+.btn-primary:hover::after {
+  transform: rotate(45deg) scale(1.1) !important;
+}
+
+/* Hero Badge */
+.hero-badge {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  color: #0f172a !important;
+  border: 1px solid rgba(255,255,255,0.5) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+  border-radius: 30px !important;
+}
+
+/* Hero Features */
+.hero-feature-icon {
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+}
+.hero-feature span {
+  color: #334155 !important;
+}
+
+/* Hero Visual */
+.hero-image-wrapper {
+  border-radius: 24px !important;
+  box-shadow: 0 0 60px rgba(13, 142, 233, 0.4), inset 0 2px 5px rgba(255,255,255,0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  overflow: hidden !important;
+}
+
+/* Add a glowing radial background behind the image to make it look futuristic */
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, transparent 70%) !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  border-radius: 50%;
+}
+
+.hero-float-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+}
+
+/* Glassmorphism for Global Sections */
+.stats-grid, .service-card, .why-card, .doctor-card-large, .appointment-form-card, .testimonial-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(25px) !important;
+  -webkit-backdrop-filter: blur(25px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 28px !important;
+}
+
+/* Disable body background blocks in remaining sections to let gradient show */
+.section-bg-alt, .appointment-section, .page-hero {
+  background: transparent !important;
+}
+
+.emergency-cta {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.85), rgba(220, 38, 38, 0.95)) !important;
+  backdrop-filter: blur(25px) !important;
+  -webkit-backdrop-filter: blur(25px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 60px 0 !important;
+  margin-top: 40px !important;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.05) !important;
+}
+
+.contact-item, .bp-info-panel, .map-embed {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255,255,255,0.4) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05) !important;
+}
+
+.bp-info-panel {
+  color: #1e293b !important;
+}
+.bp-info-title {
+  color: #0f172a !important;
+}
+
+.footer {
+  background: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(30px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+  margin-top: 40px;
+  border-radius: 40px 40px 0 0 !important;
+}
+
+/* Spacing and Polish */
+.container {
+  max-width: 1240px !important;
+}
+
+/* Fix Visibility/Contrast issues on Transparent Theme Background */
+.section-bg-blue {
+  background: transparent !important;
+  color: #1e293b !important;
+}
+
+.section-bg-blue .section-title {
+  color: #0f172a !important;
+}
+
+.section-bg-blue .section-badge {
+  background: rgba(255, 255, 255, 0.8) !important;
+  color: #0c4a6e !important;
+  border: 1px solid rgba(255,255,255,0.5) !important;
+}
+
+.section-bg-blue .section-subtitle {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+/* Why Choose Us text inside glass cards */
+.why-title {
+  color: #0f172a !important;
+}
+
+.why-desc {
+  color: #475569 !important;
+}
+
+.why-icon {
+  background: rgba(255, 255, 255, 0.6) !important;
+  color: #0284c7 !important;
+  border: 1px solid rgba(255,255,255,0.8) !important;
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 30px !important;
+  }
+  .hero-title {
+    font-size: 2.4rem !important;
+  }
+}
+
+/* Padding corrections for all pages due to floating navbar */
+.hero {
+  padding: 100px 0 60px !important;
+}
+
+.page-hero {
+  padding: 120px 0 60px !important;
+}
+
+.section-padding {
+  padding: 100px 0 !important;
+}
+
+section[id] {
+  scroll-margin-top: 120px !important;
+}
+
+/* Map Section - Horizontal layout & Address only style */
+.map-grid {
+  grid-template-columns: 1fr !important;
+  gap: 32px !important;
+}
+
+.map-embed {
+  height: 450px !important;
+  width: 100% !important;
+}
+
+.contact-info-list {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 16px !important;
+}
+
+.contact-item {
+  flex: 1 1 240px !important;
+  align-items: center !important;
+  padding: 16px 20px !important;
+}
+
+/* "add after the icons address only" - hide the labels */
+.contact-label {
+  display: none !important;
+}
+
+.contact-value {
+  margin-top: 0 !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  word-break: break-word !important;
+}
